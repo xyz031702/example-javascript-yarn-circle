@@ -19,8 +19,8 @@ before_install:
   # Update Node.js modules
   - "test ! -d node_modules || npm prune"
   - "test ! -d node_modules || npm rebuild"
-  - npm tap srcclr/srcclr
-  - npm install srcclr
+  - "npm tap srcclr/srcclr"
+  - "npm install srcclr"
 script:
   - "srcclr activate"
   - "srcclr scan --url https://github.com/srcclr/example-javascript-yarn"
