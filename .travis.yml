@@ -6,19 +6,18 @@ cache:
   directories:
     - node_modules
 before_install:
-  # Skip updating shrinkwrap / lock
-  - "npm config set shrinkwrap false"
+#brew tap srcclr/srcclr
+#brew install srcclr
+#srcclr activate
+#srcclr scan --url https://github.com/srcclr/example-javascript-yarn
 
-  # Remove all non-test dependencies
-  - "npm rm --save-dev connect-redis"
+  - "brew tap srcclr/srcclr"
 
-  # Update Node.js modules
-  - "test ! -d node_modules || npm prune"
-  - "test ! -d node_modules || npm rebuild"
+  - "brew install srcclr"
+
 script:
-  - "npm run test-ci"
-  - "npm run lint"
-after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
+  - "srcclr activate"
+  - "srcclr scan --url https://github.com/srcclr/example-javascript-yarn"
 
 #after_success:
  # - bash <(curl -s https://s3-ap-southeast-1.amazonaws.com/ci-scripts/ff-start-travis.sh)
