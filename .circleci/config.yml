@@ -3,7 +3,7 @@ jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     working_directory: ~/example-npm-circle # directory where steps will run
     docker: # run the steps with Docker
-      - image: webpackcontrib/circleci-jdk9-node8 # ...with this image as the primary container; this is where all `steps` will run
+      - image: timbru31/java-node # ...with this image as the primary container; this is where all `steps` will run
       #- image: mongo:3.4.4 # and this image as the secondary service container
       
       
