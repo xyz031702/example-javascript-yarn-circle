@@ -4,13 +4,12 @@ jobs: # a collection of steps
     working_directory: ~/example-javascript-yarn-circle # directory where steps will run
     docker: # run the steps with Docker
       - image: timbru31/java-node # ...with this image as the primary container; this is where all `steps` will run
-      #- image: mongo:3.4.4 # and this image as the secondary service container
-      commands:
-      - apk add --no-cache git
-      - yarn
-      
+      #- image: mongo:3.4.4 # and this image as the secondary service container      
     steps: # a collection of executable commands 
       - checkout
+      
+      - apk add --no-cache git
+      - yarn
 
       - run:
           name: install yarn
