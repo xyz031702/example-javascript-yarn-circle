@@ -8,13 +8,13 @@ jobs: # a collection of steps
     steps: # a collection of executable commands 
       - checkout
 
-      - run:
-         name: install git
-         command: |
-         apk add --no-cache git
-         yarn
+      #- run:
+         #name: install git
+        # command: |
+         #apk add --no-cache git
+         #yarn
       
-          name: install yarn
-          command: yarn install --frozen-lockfile
+         # name: install yarn
+         # command: yarn install --frozen-lockfile
       
       - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)
