@@ -7,7 +7,7 @@
   "dependencies": {
     "@google-cloud/vision": "0.8.0",
     "jquery": "3.0.0-alpha1",
-    "express": "4.1.1",
+    "express": "4.16.0",
     "boom": "",
     "tinymce": "4.2.3",
     "console-io": "2.6.3",
