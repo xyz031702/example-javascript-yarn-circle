@@ -5,7 +5,7 @@
   "author": "srcclr <hello@srcclr.com>",
   "description": "A node project to demostrate srcclr scans for Yarn Repo",
   "dependencies": {
-    "@google-cloud/vision": "0.8.0",
+    "@google-cloud/vision": "2.0.0",
     "jquery": "3.5.0",
     "express": "4.16.0",
     "boom": "",
